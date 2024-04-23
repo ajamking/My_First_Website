@@ -1,0 +1,61 @@
+body {
+    background-color: #08161e;
+    font-family: "Comic Sans MS", "Comic Sans";
+    color: blueviolet;
+}
+
+.nav_bar {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.container {
+    margin-top: 30px;
+}
+
+.nav_text {
+display: flex;
+align-items: center;
+justify-content: right;
+}
+
+.title_my_gif{
+    text-align: center;
+}
+
+.my_gif {
+    background: url(https://media.tenor.com/FAS_-m0OwbcAAAAd/programmer-code.gif) no-repeat center center;
+    background-size: 100%;
+    width: 350px;
+    height: 200px;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.my_photo {
+    background: url(https://gagaru.club/uploads/posts/2023-05/1685550704_gagaru-club-p-grecheskie-skulpturi-19.jpg) no-repeat center center;
+    background-size: 100%;
+    width: 1280px;
+    height: 350px;
+}
+
+.my_logo {
+    background: url(https://i.imgur.com/VzSFZtI.png) no-repeat center center;
+    background-size: 100%;
+    width: 200px;
+    height: 70px;
+}
+
+.img_size {}
+
+.title_photo {}
+
+.row {}
+
+.col-6 {}
+
+.col-3 {}
+
+.col-3.nav_logo {}
+
+.col-9 {}
