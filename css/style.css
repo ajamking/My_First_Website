@@ -46,6 +46,27 @@ justify-content: right;
     height: 70px;
 }
 
+#my_button{
+    border: none;
+    border-radius: 15px;
+    width: 150px;
+    height: 50px;
+    background-color: blueviolet;
+    color: blanchedalmond;
+    font-weight: bold;
+}
+
+#demo_image{
+margin-top: 20px;
+width: 25%;
+}
+
+.button_js{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .img_size {}
 
 .title_photo {}
