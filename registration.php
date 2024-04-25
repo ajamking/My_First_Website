@@ -23,9 +23,9 @@
             <div class="col-12">
                 <form method="POST" action="registration.php">
                     <div class="row form__reg"><input class="form" type="email" name="email" placeholder="Email"></div>
-                    <div class="row form__reg"><input class="form" type="text" name="login" placeholder="Login"></div>
-                    <div class="row form__reg"><input class="form" type="password" name="password" placeholder="Password"></div>
-                    <button type="submit" class="btn_red btn__reg" name="submit">Продолжить</button>
+                    <div class="row form__reg"><input class="form" type="username" name="username" placeholder="Username"></div>
+                    <div class="row form__reg"><input class="form" type="pass" name="pass" placeholder="Pass"></div>
+                    <button type="submit" class="btn_purple btn__reg" name="submit">Продолжить</button>
                 </form>
             </div>
         </div>
@@ -37,18 +37,22 @@
 <?php
 require_once('db.php');
 
-$link = mysqli_connect('127.0.0.1', 'kali', 'kali', 'PT_Start_DB');
+$link = mysqli_connect('127.0.0.1', 'root', 'kali', 'first');
+
+if (isset($_COOKIE['User'])) {
+    header("Location: login.php");
+}
 
 if (isset($_POST['submit'])) 
 {
     $email = $_POST['email'];
     $username = $_POST['username'];
-    $password = $_POST['password'];
+    $pass = $_POST['pass'];
 
-    if (!$email || !$username || !$password) die ('Пожалуйста введите все значения!');
+    if (!$email || !$username || !$pass) die ('Пожалуйста введите все значения!');
 
-    $sql = "INSERT INTO users (email, username, password) VALUES ('$email', '$username', '$password')";
+    $sql = "INSERT INTO users (email, username, pass) VALUES ('$email', '$username', '$pass')";
 
-    if (!mysqli_query($link, $sql)) {echo "Не удалось добавить пользователя";}
+    if (!mysqli_query($link, $sql)) { echo "Не удалось добавить пользователя"; }
 }
 ?>

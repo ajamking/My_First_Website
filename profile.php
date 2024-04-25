@@ -66,7 +66,7 @@
             </div>
         </div>
     </div>
-
+ 
     <!--Кнопка-->
     <div class="container">
         <div class="row">
@@ -77,7 +77,44 @@
         </div>
     </div>
 
+    <!--Форма создания постов-->
+    <div class="container post_form">
+        <div class="row">
+            <div class="col-12 post_row_header">
+                <h1 class="hello">Привет, <?php echo $_COOKIE['User'];?> </h1>
+            </div>
+        </div>
+
+        <div class="row col-12">
+            <form method="POST" action="profile.php">
+                <input type="text" class="post_header" type="text" name="title" placeholder="Заголовок вашего поста"></input>
+                <textarea name="text" class="post_text_area" cols="30" rows="10" placeholder="Введите текст вашего поста..."></textarea>
+                <button type="submit" class="post_btn_purple" name="submit">Сохранить пост!</button>
+            </form>
+        </div>
+    </div>
+
+
     <script type="text/javascript" src="js/button.js"></script>
 </body>
 
 </html>
+
+<?php
+require_once('db.php');
+
+$link = mysqli_connect('127.0.0.1', 'root', 'kali', 'first');
+
+if (isset($_POST['submit'])) 
+{
+    $title = $_POST['title'];
+    $main_text = $_POST['text'];
+
+    if (!$title || !$main_text) die ("Заполните все поля");
+
+    $sql = "INSERT INTO posts (title, main_text) VALUES ('$title', '$main_text')";
+
+    if (!mysqli_query($link, $sql)) die ("Не удалось добавить пост");
+}
+
+?> 

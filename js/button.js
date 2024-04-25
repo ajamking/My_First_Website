@@ -14,4 +14,3 @@ document.getElementById("my_button").onclick = function () {
         document.getElementById("demo_image").appendChild(img)
 	}
 }
-

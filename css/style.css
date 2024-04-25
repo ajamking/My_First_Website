@@ -11,12 +11,14 @@ body {
 
 .container {
     margin-top: 30px;
+    background-size: 100%;
+    width: 1280px;
 }
 
 .nav_text {
-display: flex;
-align-items: center;
-justify-content: right;
+    display: flex;
+    align-items: center;
+    justify-content: right;
 }
 
 .title_my_gif{
@@ -40,7 +42,7 @@ justify-content: right;
 }
 
 .my_logo {
-    background: url(https://i.imgur.com/VzSFZtI.png) no-repeat center center;
+    background-image: url(https://i2.paste.pics/a3eb0aff47403f64307a7d6f7087c767.png?rand=nIZaUKgE8T) no-repeat center center;
     background-size: 100%;
     width: 200px;
     height: 70px;
@@ -62,21 +64,69 @@ width: 25%;
 }
 
 .button_js{
+    margin: 0 auto;
+    display: flex;
+    
+}
+
+.form__reg{
+    margin-top: 10px;
+    border: none;
+} 
+
+.btn__reg{
+    margin-top: 10px;
+    background-color: blueviolet;
+    color: blanchedalmond;
+    font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.img_size {}
+.hello{
+    background-size: 100%;
+    width: 1280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-.title_photo {}
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-.row {}
+.post_header
+{
+    background-size: 100%;
+    width: 1280px;
+    margin: 0 auto;
+    margin-top: 10px;
+    display: flex;
+}
 
-.col-6 {}
+.post_text_area
+{
+    margin: 0 auto;
+    margin-top: 10px;
+    display: flex;
+    background-size: 100%;
+    width: 1280px;
+    height: 350px;
+}
 
-.col-3 {}
-
-.col-3.nav_logo {}
-
-.col-9 {}
+.post_btn_purple
+{
+    margin: 0 auto;
+    margin-top: 10px;
+    display: flex;
+    border: none;
+    border-radius: 15px;
+    width: 150px;
+    height: 50px;
+    background-color: blueviolet;
+    color: blanchedalmond;
+    font-weight: bold;
+}
